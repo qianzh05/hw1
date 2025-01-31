@@ -18,13 +18,13 @@ void split(Node*& in, Node*& odds, Node*& evens)
 {
   /* Add code here */
 // WRITE YOUR CODE HERE
-  if (in == nullptr){
+  if (in == nullptr){//check if empty
     return;
   }
-  split(in->next, odds, evens);
+  split(in->next, odds, evens);//head recursion to operate from the last node to the first node
   if (in->value % 2 == 0){
-    in->next = evens;
-    evens = in;
+    in->next = evens;//this ensures odds and evens are from smallest to biggest
+    evens = in;//connect in to evens then update evens to the previous node so we can add to the front
   }
   else{
     in->next = odds;
@@ -35,7 +35,7 @@ void split(Node*& in, Node*& odds, Node*& evens)
 
 /* If you needed a helper function, write it here */
 
-void print(Node*& head){
+void print(Node*& head){//for debug to display the list
   if (head == nullptr){
     return;
   }
@@ -43,7 +43,7 @@ void print(Node*& head){
   print(head->next);
 }
 
-void deleteList(Node*& head){
+void deleteList(Node*& head){//for debug to free memory
   if (head == nullptr){
     return;
   }
