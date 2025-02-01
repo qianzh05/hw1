@@ -22,6 +22,6 @@ int main(int argc, char* argv[])
     print(odd);
     print(even);
 
-    deleteList(odd);
-    deleteList(even);
+    destruct(odd);
+    destruct(even);
 }

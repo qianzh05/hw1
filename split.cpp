@@ -42,11 +42,11 @@ void print(Node*& head){//for debug to display the list
   print(head->next);
 }
 
-void deleteList(Node*& head){//for debug to free memory
+void destruct(Node*& head){//for debug to free memory
   if (head == nullptr){
     return;
   }
   Node *temp = head->next;
   delete head;
-  deleteList(temp);
+  destruct(temp);
 }
