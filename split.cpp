@@ -9,7 +9,6 @@ To test your program write a separate .cpp file and #include
 split.h.  **Do NOT add main() to this file**.  When you submit
 the function below should be the only one in this file.
 */
-#include <iostream>
 #include "split.h"
 
 /* Add a prototype for a helper function here if you need */
@@ -39,7 +38,7 @@ void print(Node*& head){//for debug to display the list
   if (head == nullptr){
     return;
   }
-  std::cout << head->value << std::endl;
+  //std::cout << head->value << std::endl;
   print(head->next);
 }
 
